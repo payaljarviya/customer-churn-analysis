@@ -66,10 +66,14 @@ Recall of 0.80 on churners means the model catches 4 in 5 actual churners — wh
 4. Total charges (↑ churn risk)
 5. Online security (↓ churn risk)
 
-**Revenue impact estimate** (from the notebook):
+**Revenue impact scenario** (from the notebook):
 - Average revenue lost per churner: ~$1,269
-- High-risk tier (top 20% by predicted probability) catches 71% of actual churners
-- Saving even 20% of high-risk customers ≈ **$67,000 retained** in the test set alone
+- High-risk tier (top 20% by predicted probability) catches 71% of actual churners (266 of 374)
+- *If* a retention campaign saved 20% of that high-risk tier, that is ≈ $67,000 in the test set
+
+The $67,000 is a scenario built on an assumed save rate, not realised revenue. No campaign was run. The 20% save rate is a planning assumption and the figure moves proportionally with it.
+
+Note that the tier capture (71%, or 266 of 374) and the classifier recall (0.80) are different numbers answering different questions. The first is a targeting statement about the top 20% by predicted probability. The second is a property of the classification threshold.
 
 ---
 
